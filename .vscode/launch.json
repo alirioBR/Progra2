@@ -3,6 +3,34 @@
   "configurations": [
     {
       "type": "java",
+      "name": "StrConvert",
+      "request": "launch",
+      "mainClass": "StrConvert",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
+      "name": "LeaNumeros",
+      "request": "launch",
+      "mainClass": "LeaNumeros",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
+      "name": "Minusculas",
+      "request": "launch",
+      "mainClass": "Minusculas",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
+      "name": "Divison",
+      "request": "launch",
+      "mainClass": "Divison",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
       "name": "Division",
       "request": "launch",
       "mainClass": "Division",
