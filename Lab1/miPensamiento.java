@@ -1,5 +1,6 @@
 package Lab1;
 
+//este codigo muestra la cantidad de letras que quedan de la frase "Ejemplo de ejercicio para la GLORIOSA UFG" si le quitamos las vocales minuslas y mayusculas.
 public class miPensamiento {
 
 public static void main(String[] args) {
