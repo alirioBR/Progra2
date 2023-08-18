@@ -3,6 +3,55 @@
   "configurations": [
     {
       "type": "java",
+      "name": "añosbisiestos",
+      "request": "launch",
+      "mainClass": "Lab1.añosbisiestos",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
+      "name": "fibonacci",
+      "request": "launch",
+      "mainClass": "Lab1.fibonacci",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
+      "name": "factoriales",
+      "request": "launch",
+      "mainClass": "Lab1.factoriales",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
+      "name": "leapyears",
+      "request": "launch",
+      "mainClass": "Lab1.leapyears",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
+      "name": "numerosimpares",
+      "request": "launch",
+      "mainClass": "Lab1.numerosimpares",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
+      "name": "miPensamiento",
+      "request": "launch",
+      "mainClass": "Lab1.miPensamiento",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
+      "name": "Credito",
+      "request": "launch",
+      "mainClass": "Credito",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
       "name": "Credito",
       "request": "launch",
       "mainClass": "Practica2.Credito",
