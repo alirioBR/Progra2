@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "DiaApp",
+      "request": "launch",
+      "mainClass": "DiaApp",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
+      "name": "menu",
+      "request": "launch",
+      "mainClass": "menu",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
       "name": "iva",
       "request": "launch",
       "mainClass": "Parcial1.iva",
