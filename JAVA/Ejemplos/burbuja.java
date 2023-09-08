@@ -1,12 +1,20 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class burbuja;
+public class burbuja{
 
 public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int aux = 0;
-    int elementos *5;
+    System.out.println("ingrese la cantidad de elementos:");
+    int elementos = sc.nextInt();
+    //System.out.println("Ordenar de forma ascendente SI/NO?:");
+    //boolean (orden==true) = sc.nextBoolean();
+
+    
+    try {
     int nums[] = new int[elementos];
+    System.out.println("ingrese elementos:");
     for(int i=0;i<elementos;i++){
         nums[i] = sc.nextInt();
 }
@@ -17,13 +25,17 @@ public static void main(String[] args) {
                 nums[k] = nums[k+1];
                 nums[k+1] = aux;
             }
+            }
+            }
 
-    if(j==3){
-
+    System.out.println("Lista de elementos ordenados: "); 
+        for(var i=0; i<elementos; i++) 
+        {System.out.println(nums[i]);}
+    }
+    catch (InputMismatchException ex) {
+        System.out.println("Debe ingresar obligatoriamente un número entero.");
+        }
 
         
     }
-        }
-    }
 }
-
