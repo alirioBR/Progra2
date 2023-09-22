@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Gestionadorcito",
+      "request": "launch",
+      "mainClass": "Gestionadorcito",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
       "name": "burbuja",
       "request": "launch",
       "mainClass": "burbuja",
