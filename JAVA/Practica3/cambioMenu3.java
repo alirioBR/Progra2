@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class menu5 {
+public class cambioMenu3 {
     public static void main(String[] args) {
         double[] itemPrices = { 3, 3, 3, 3, 7, 7, 7, 1.50, 1.50, 2, 3, 3, 3, 3 };
         String[] itemNames = {
@@ -42,14 +42,6 @@ public class menu5 {
                 }
             }
 
-            System.out.println("Resumen de la orden para mesa " + mesa + ":");
-            for (int i = 0; i < orders.size(); i++) {
-                ClientOrder clientOrder = orders.get(i);
-                System.out.println("Cliente " + (i + 1) + ":");
-                clientOrder.showOrderDetails(); // Updated method name here
-                System.out.println("Total para Cliente " + (i + 1) + ": $" + clientOrder.calculateTotal());
-            }
-
             System.out.print("¿Desea dar propina (yes/no)?: ");
             String tipInput = obj.next();
 
@@ -66,6 +58,41 @@ public class menu5 {
                 System.out.println("Propina del 15% agregada. Su total es: $" + total);
             } else {
                 System.out.println("Su total es: $" + total);
+            }
+
+            // Calculate and display change
+            System.out.print("Ingrese la cantidad pagada por el cliente: $");
+            double amountPaid = obj.nextDouble();
+            double change = amountPaid - total;
+            System.out.println("Cambio para el cliente: $" + change);
+
+            // Calculate and display change denominations
+            calculateAndDisplayChangeDenominations(change);
+        }
+    }
+
+    // Method to calculate and display change denominations
+    public static void calculateAndDisplayChangeDenominations(double change) {
+        int[] denominations = { 100, 50, 20, 10, 5, 1 };
+        double remainingChange = change;
+
+        System.out.println("Desglose del cambio:");
+        for (int denomination : denominations) {
+            if (remainingChange >= denomination) {
+                int count = (int) (remainingChange / denomination);
+                System.out.println("$" + denomination + " bills: " + count);
+                remainingChange -= count * denomination;
+            }
+        }
+
+        int remainingChangeInCents = (int) (remainingChange * 100);
+        int[] coinDenominations = { 25, 10, 5, 1 };
+
+        for (int coinDenomination : coinDenominations) {
+            if (remainingChangeInCents >= coinDenomination) {
+                int count = remainingChangeInCents / coinDenomination;
+                System.out.println(coinDenomination + " cent coins: " + count);
+                remainingChangeInCents -= count * coinDenomination;
             }
         }
     }
@@ -85,12 +112,6 @@ class ClientOrder {
         }
         return total;
     }
-
-    public void showOrderDetails() { // Updated method name here
-        for (OrderItem item : orderItems) {
-            System.out.println(item.getQuantity() + "x " + item.getItemName() + " $" + item.calculateItemTotal());
-        }
-    }
 }
 
 class OrderItem {
@@ -106,13 +127,5 @@ class OrderItem {
 
     public double calculateItemTotal() {
         return itemPrice * quantity;
-    }
-
-    public String getItemName() {
-        return itemName;
-    }
-
-    public int getQuantity() {
-        return quantity;
     }
 }

@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+// menu final 
 public class menu3 {
     public static void main(String[] args) {
         double[] itemPrices = { 3, 3, 3, 3, 7, 7, 7, 1.50, 1.50, 2, 3, 3, 3, 3 };

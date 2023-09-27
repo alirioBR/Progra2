@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "cambioMenu3",
+      "request": "launch",
+      "mainClass": "cambioMenu3",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
       "name": "menu5",
       "request": "launch",
       "mainClass": "menu5",
