@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "numeroLetra",
+      "request": "launch",
+      "mainClass": "Parcial2.numeroLetra",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
+      "name": "cambio",
+      "request": "launch",
+      "mainClass": "Parcial2.cambio",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
       "name": "cambioMenu3",
       "request": "launch",
       "mainClass": "cambioMenu3",
