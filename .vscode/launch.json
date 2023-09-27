@@ -3,6 +3,34 @@
   "configurations": [
     {
       "type": "java",
+      "name": "menu5",
+      "request": "launch",
+      "mainClass": "menu5",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
+      "name": "menu4",
+      "request": "launch",
+      "mainClass": "menu4",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
+      "name": "menu3",
+      "request": "launch",
+      "mainClass": "menu3",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
+      "name": "binaria",
+      "request": "launch",
+      "mainClass": "Practica4.binaria",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
       "name": "Gestionadorcito",
       "request": "launch",
       "mainClass": "Gestionadorcito",
