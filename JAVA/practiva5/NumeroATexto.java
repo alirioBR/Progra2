@@ -31,7 +31,7 @@ public class NumeroATexto {
     }
 
     public static String convertirNumeroATexto(int numero) {
-        if (numero < 0 || numero > 999) {
+        if (numero < 0 || numero > 999999999) {
             return "Número fuera de rango";
         }
         if (numero < 10) {

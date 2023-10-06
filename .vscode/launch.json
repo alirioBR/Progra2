@@ -3,6 +3,34 @@
   "configurations": [
     {
       "type": "java",
+      "name": "LlamaPersona",
+      "request": "launch",
+      "mainClass": "OOP.LlamaPersona",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
+      "name": "Persona$LlamaPersona",
+      "request": "launch",
+      "mainClass": "OOP.Persona$LlamaPersona",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
+      "name": "parcial25",
+      "request": "launch",
+      "mainClass": "parcial25",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
+      "name": "parcial2",
+      "request": "launch",
+      "mainClass": "parcial2",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
       "name": "NumeroATexto1",
       "request": "launch",
       "mainClass": "Parcial2.NumeroATexto1",

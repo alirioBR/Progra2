@@ -1,4 +1,4 @@
-package Parcial2;
+package practiva5;
 
 import java.util.ArrayList;
 import java.util.List;

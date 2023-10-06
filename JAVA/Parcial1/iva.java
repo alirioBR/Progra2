@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class iva {
     public static void main(String[] args) {
         double afp, isss, salario, salariomdes, salarioF, tramo2, tramo3, tramo4;
-
+        System.out.print("Este programa muestra los descuentos para alguien a quien se le paga mensualmente\n");
         try (Scanner obj = new Scanner(System.in)) {
             System.out.print("Ingrese salario base: ");
             salario = obj.nextDouble();
@@ -12,7 +12,7 @@ public class iva {
 
         afp = salario * 0.03;
         isss = salario * 0.0725;
-        System.out.print("Este programa muestra los descuentos para alguien a quien se le paga mensualmente\n");
+
         System.out.println("A su salario se le contara la cantidad de $" + afp + " en concepto de AFP y la cantidad de $" + isss + " por el Seguro Social");
 
         salariomdes = salario - (afp + isss);
