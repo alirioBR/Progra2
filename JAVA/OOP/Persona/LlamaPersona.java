@@ -1,4 +1,4 @@
-package OOP;
+package OOP.Persona;
 
 public class LlamaPersona {
     public static void main(String[] args) {

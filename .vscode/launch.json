@@ -3,6 +3,34 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Usuario",
+      "request": "launch",
+      "mainClass": "OOP.empresa.Usuario",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
+      "name": "Persona2",
+      "request": "launch",
+      "mainClass": "OOP.empresa.Persona2",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
+      "name": "llamarCoche",
+      "request": "launch",
+      "mainClass": "OOP.llamarCoche",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
+      "name": "coche",
+      "request": "launch",
+      "mainClass": "OOP.coche",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
       "name": "LlamaPersona",
       "request": "launch",
       "mainClass": "OOP.LlamaPersona",
