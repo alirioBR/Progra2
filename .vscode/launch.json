@@ -3,6 +3,55 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Nodo",
+      "request": "launch",
+      "mainClass": "Nodo",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "Main",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
+      "name": "tareasQueue",
+      "request": "launch",
+      "mainClass": "tareasQueue",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
+      "name": "MemoriaFIFO",
+      "request": "launch",
+      "mainClass": "MemoriaFIFO",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
+      "name": "ListaEnlazada",
+      "request": "launch",
+      "mainClass": "Enlazados.ListaEnlazada",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
+      "name": "ListaEnlazadaDoble$Main",
+      "request": "launch",
+      "mainClass": "Enlazados.ListaEnlazadaDoble$Main",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "Enlazados.Main",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
       "name": "Usuario",
       "request": "launch",
       "mainClass": "OOP.empresa.Usuario",
