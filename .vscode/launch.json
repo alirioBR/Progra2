@@ -3,6 +3,27 @@
   "configurations": [
     {
       "type": "java",
+      "name": "ArbolOrganizacion",
+      "request": "launch",
+      "mainClass": "arboles.ArbolOrganizacion",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
+      "name": "NodoDirectorio",
+      "request": "launch",
+      "mainClass": "arboles.NodoDirectorio",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
+      "name": "main",
+      "request": "launch",
+      "mainClass": "arboles.main",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
       "name": "Main",
       "request": "launch",
       "mainClass": "arboles.Main",

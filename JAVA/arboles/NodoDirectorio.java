@@ -62,8 +62,6 @@ class NodoDirectorio {
 
         return null; // No se encontró el directorio
     }
-}
-public class Main {
     public static void main(String[] args) {
         NodoDirectorio raiz = new NodoDirectorio("Raiz");
 
@@ -75,9 +73,8 @@ public class Main {
 
         directorio1.agregarArchivo("Archivo1");
         directorio1.agregarArchivo("Archivo2");
-
         directorio2.agregarArchivo("Archivo3");
-
+        directorio2.agregarArchivo("Archivo4");
         // Imprime la estructura del árbol
         raiz.imprimirDirectorio();
 
