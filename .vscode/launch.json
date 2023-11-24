@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "arboles.Main",
+      "projectName": "Progra2_5175101c"
+    },
+    {
+      "type": "java",
       "name": "Almacencito",
       "request": "launch",
       "mainClass": "LAB3.Almacencito",
