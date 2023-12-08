@@ -1,0 +1,135 @@
+class Estudiante {
+    int id;
+    String nombre;
+    String carrera;
+    double promedio;
+
+    public Estudiante(int id, String nombre, String carrera, double promedio) {
+        this.id = id;
+        this.nombre = nombre;
+        this.carrera = carrera;
+        this.promedio = promedio;
+    }
+}
+
+class Nodo {
+    Estudiante estudiante;
+    Nodo izquierdo, derecho;
+
+    public Nodo(Estudiante estudiante) {
+        this.estudiante = estudiante;
+        this.izquierdo = this.derecho = null;
+    }
+}
+
+class ArbolBinario {
+    Nodo raiz;
+
+    public ArbolBinario() {
+        raiz = null;
+    }
+
+    // Método de inserción
+    public void insertarEstudiante(Estudiante estudiante) {
+        raiz = insertarRec(raiz, estudiante);
+    }
+
+    private Nodo insertarRec(Nodo raiz, Estudiante estudiante) {
+        if (raiz == null) {
+            return new Nodo(estudiante);
+        }
+
+        if (estudiante.id < raiz.estudiante.id) {
+            raiz.izquierdo = insertarRec(raiz.izquierdo, estudiante);
+        } else if (estudiante.id > raiz.estudiante.id) {
+            raiz.derecho = insertarRec(raiz.derecho, estudiante);
+        }
+
+        return raiz;
+    }
+
+    // Método para buscar un estudiante por número de identificación
+    public Estudiante buscarEstudiante(int id) {
+        return buscarRec(raiz, id);
+    }
+
+    private Estudiante buscarRec(Nodo raiz, int id) {
+        if (raiz == null || raiz.estudiante.id == id) {
+            return (raiz != null) ? raiz.estudiante : null;
+        }
+
+        if (id < raiz.estudiante.id) {
+            return buscarRec(raiz.izquierdo, id);
+        }
+
+        return buscarRec(raiz.derecho, id);
+    }
+
+    // Método para mostrar el árbol en orden (InOrder)
+    public void inOrder() {
+        inOrderRec(raiz);
+    }
+
+    private void inOrderRec(Nodo raiz) {
+        if (raiz != null) {
+            inOrderRec(raiz.izquierdo);
+            System.out.println(raiz.estudiante.id + " - " + raiz.estudiante.nombre);
+            inOrderRec(raiz.derecho);
+        }
+    }
+
+    // Método para mostrar el árbol en preorden (PreOrder)
+    public void preOrder() {
+        preOrderRec(raiz);
+    }
+
+    private void preOrderRec(Nodo raiz) {
+        if (raiz != null) {
+            System.out.println(raiz.estudiante.id + " - " + raiz.estudiante.nombre);
+            preOrderRec(raiz.izquierdo);
+            preOrderRec(raiz.derecho);
+        }
+    }
+
+    // Método para mostrar el árbol en postorden (PostOrder)
+    public void postOrder() {
+        postOrderRec(raiz);
+    }
+
+    private void postOrderRec(Nodo raiz) {
+        if (raiz != null) {
+            postOrderRec(raiz.izquierdo);
+            postOrderRec(raiz.derecho);
+            System.out.println(raiz.estudiante.id + " - " + raiz.estudiante.nombre);
+        }
+    }
+
+public class Main {
+    public static void main(String[] args) {
+        ArbolBinario arbol = new ArbolBinario();
+
+        // Inserta al menos 5 estudiantes
+        arbol.insertarEstudiante(new Estudiante(101, "Juan", "Informática", 85.5));
+        arbol.insertarEstudiante(new Estudiante(205, "Maria", "Matemáticas", 78.2));
+        arbol.insertarEstudiante(new Estudiante(134, "Carlos", "Física", 92.0));
+        arbol.insertarEstudiante(new Estudiante(310, "Ana", "Química", 89.7));
+        arbol.insertarEstudiante(new Estudiante(178, "Pedro", "Biología", 76.8));
+
+        // Realiza búsquedas por número de identificación
+        Estudiante buscado = arbol.buscarEstudiante(310);
+        System.out.println("Estudiante encontrado: " + ((buscado != null) ? buscado.nombre : "No encontrado"));
+
+        // Mostrar el árbol en orden (InOrder)
+        System.out.println("\nÁrbol en orden (InOrder):");
+        arbol.inOrder();
+
+        // Mostrar el árbol en preorden (PreOrder)
+        System.out.println("\nÁrbol en preorden (PreOrder):");
+        arbol.preOrder();
+
+        // Mostrar el árbol en postorden (PostOrder)
+        System.out.println("\nÁrbol en postorden (PostOrder):");
+        arbol.postOrder();
+    				}
+								}
+}
