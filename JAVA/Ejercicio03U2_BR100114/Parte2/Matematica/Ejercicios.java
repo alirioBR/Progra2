@@ -14,7 +14,7 @@ public class Ejercicios {
         OperacionesMatematicas operaciones = new OperacionesMatematicas();
 
         int suma = operaciones.sumar(numero1, numero2);
-        int resta = operaciones.restar(numer1, numero2);
+        int resta = operaciones.restar(numero1, numero2);
         int multiplicacion = operaciones.multiplicar(numero1, numero2);
         double division = operaciones.dividir(numero1, numero2);
 
