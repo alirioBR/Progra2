@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "App",
+      "request": "launch",
+      "mainClass": "JAVA.AppRegistro.app.src.main.java.appregistro.App",
+      "projectName": "Progra2_471987ea"
+    },
+    {
+      "type": "java",
       "name": "Ejercicios",
       "request": "launch",
       "mainClass": "Ejercicio03U2_BR100114.Parte2.Matematica.Ejercicios",
