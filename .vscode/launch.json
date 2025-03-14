@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "JAVA.Asistencia.Main",
+      "projectName": "Progra2_471987ea"
+    },
+    {
+      "type": "java",
+      "name": "App",
+      "request": "launch",
+      "mainClass": "JAVA.Asistencia.Asistencia.src.App",
+      "projectName": "Progra2_471987ea"
+    },
+    {
+      "type": "java",
       "name": "App",
       "request": "launch",
       "mainClass": "JAVA.AppRegistro.app.src.main.java.appregistro.App",
