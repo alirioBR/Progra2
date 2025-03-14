@@ -1,4 +1,4 @@
-package JAVA.Asistencia;
+package Asistencia;
 
 import java.util.List;
 import java.util.Scanner;
@@ -24,7 +24,7 @@ public class Main {
                 case 1:
                     System.out.print("Nombre: ");
                     String nombre = scanner.nextLine();
-                    System.out.print("Apellido: ");
+                    System.out.print("Apellido: "); 
                     String apellido = scanner.nextLine();
                     System.out.print("Código: ");
                     String codigo = scanner.nextLine();

@@ -1,4 +1,4 @@
-package JAVA.Asistencia;
+package Asistencia;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
