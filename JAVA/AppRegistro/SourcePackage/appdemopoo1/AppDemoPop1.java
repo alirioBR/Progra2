@@ -1,4 +1,4 @@
-package JAVA.AppRegistro.SourcePackage.appdemopoo1;
+package appdemopoo1;
 
 public class AppDemoPop1 {
 
