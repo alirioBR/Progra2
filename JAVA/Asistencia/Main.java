@@ -1,5 +1,3 @@
-package Asistencia;
-
 import java.util.List;
 import java.util.Scanner;
 
@@ -15,7 +13,8 @@ public class Main {
             System.out.println("2. Actualizar estudiante");
             System.out.println("3. Eliminar estudiante");
             System.out.println("4. Listar estudiantes");
-            System.out.println("5. Salir");
+            System.out.println("5. Marcar asistencia");
+            System.out.println("6. Salir");
             System.out.print("Seleccione una opción: ");
             opcion = scanner.nextInt();
             scanner.nextLine(); // Consumir el salto de línea
@@ -24,7 +23,7 @@ public class Main {
                 case 1:
                     System.out.print("Nombre: ");
                     String nombre = scanner.nextLine();
-                    System.out.print("Apellido: "); 
+                    System.out.print("Apellido: ");
                     String apellido = scanner.nextLine();
                     System.out.print("Código: ");
                     String codigo = scanner.nextLine();
@@ -40,7 +39,7 @@ public class Main {
                 case 2:
                     System.out.print("ID del estudiante a actualizar: ");
                     int idActualizar = scanner.nextInt();
-                    scanner.nextLine(); // Consumir el salto de línea
+                    scanner.nextLine();
                     System.out.print("Nuevo nombre: ");
                     String nuevoNombre = scanner.nextLine();
                     System.out.print("Nuevo apellido: ");
@@ -70,21 +69,34 @@ public class Main {
                     List<Estudiante> estudiantes = estudianteDAO.listar();
                     System.out.println("\n--- LISTA DE ESTUDIANTES ---");
                     for (Estudiante e : estudiantes) {
-                        System.out.println("ID: " + e.getId() + " | Nombre: " + e.getNombre() + " " + e.getApellido() + " | Código: " + e.getCodigo());
+                        System.out.println("ID: " + e.getId() + " | Nombre: " + e.getNombre() + " " + e.getApellido() + 
+                                           " | Código: " + e.getCodigo() + " | Estado: " + e.getEstado());
                     }
                     break;
 
                 case 5:
+                    System.out.print("ID del estudiante a marcar asistencia: ");
+                    int idAsistencia = scanner.nextInt();
+                    scanner.nextLine(); // Consumir salto de línea
+                    System.out.print("Estado (Presente/Ausente): ");
+                    String estado = scanner.nextLine();
+
+                    if (estudianteDAO.marcarAsistencia(idAsistencia, estado)) {
+                        System.out.println("✅ Asistencia marcada correctamente.");
+                    } else {
+                        System.out.println("❌ Error al marcar asistencia.");
+                    }
+                    break;
+
+                case 6:
                     System.out.println("Saliendo del sistema...");
                     break;
 
                 default:
                     System.out.println("❌ Opción no válida, intente de nuevo.");
             }
-        } while (opcion != 5);
+        } while (opcion != 6);
 
         scanner.close();
     }
 }
-
-

@@ -75,4 +75,16 @@ public class EstudianteDAO implements IEstudianteDAO {
         }
         return estudiantes;
     }
+
+public boolean marcarAsistencia(int id, String estado) {
+    String sql = "UPDATE Estudiantes SET estado = ? WHERE id = ?";
+    try (PreparedStatement stmt = conexion.prepareStatement(sql)) {
+        stmt.setString(1, estado);
+        stmt.setInt(2, id);
+        return stmt.executeUpdate() > 0;
+    } catch (SQLException e) {
+        System.out.println("Error al marcar asistencia: " + e.getMessage());
+        return false;
+    }
+}
 }
