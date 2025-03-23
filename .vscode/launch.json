@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "TestConexion",
+      "request": "launch",
+      "mainClass": "Asistencia.TestConexion",
+      "projectName": "Progra2_471987ea"
+    },
+    {
+      "type": "java",
       "name": "Main",
       "request": "launch",
       "mainClass": "Asistencia.Main",
