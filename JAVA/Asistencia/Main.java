@@ -1,3 +1,5 @@
+package Asistencia;
+
 import java.util.List;
 import java.util.Scanner;
 
@@ -28,7 +30,7 @@ public class Main {
                     System.out.print("Código: ");
                     String codigo = scanner.nextLine();
                     
-                    Estudiante nuevoEstudiante = new Estudiante(0, nombre, apellido, codigo);
+                    Estudiante nuevoEstudiante = new Estudiante(0, nombre, apellido, codigo, null);
                     if (estudianteDAO.insertar(nuevoEstudiante)) {
                         System.out.println("✅ Estudiante insertado correctamente.");
                     } else {
@@ -47,7 +49,7 @@ public class Main {
                     System.out.print("Nuevo código: ");
                     String nuevoCodigo = scanner.nextLine();
 
-                    Estudiante estudianteActualizado = new Estudiante(idActualizar, nuevoNombre, nuevoApellido, nuevoCodigo);
+                    Estudiante estudianteActualizado = new Estudiante(idActualizar, nuevoNombre, nuevoApellido, nuevoCodigo, null);
                     if (estudianteDAO.actualizar(estudianteActualizado)) {
                         System.out.println("✅ Estudiante actualizado correctamente.");
                     } else {
@@ -73,20 +75,30 @@ public class Main {
                                            " | Código: " + e.getCodigo() + " | Estado: " + e.getEstado());
                     }
                     break;
-
+                
                 case 5:
-                    System.out.print("ID del estudiante a marcar asistencia: ");
-                    int idAsistencia = scanner.nextInt();
-                    scanner.nextLine(); // Consumir salto de línea
-                    System.out.print("Estado (Presente/Ausente): ");
-                    String estado = scanner.nextLine();
-
-                    if (estudianteDAO.marcarAsistencia(idAsistencia, estado)) {
+                    System.out.print("Código del estudiante a marcar asistencia: ");
+                    String codigoAsistencia = scanner.nextLine(); 
+                
+                    System.out.println("Marcar asistencia:");
+                    System.out.println("1. Presente");
+                    System.out.println("2. Ausente");
+                    System.out.print("Seleccione una opción: ");
+                    int opcionAsistencia = scanner.nextInt();
+                    scanner.nextLine(); 
+                
+                    String estado = (opcionAsistencia == 1) ? "Presente" : "Ausente";
+                
+                    System.out.println("🛠️ Intentando marcar asistencia para Código " + codigoAsistencia + " como " + estado);
+                
+                    if (estudianteDAO.marcarAsistencia(codigoAsistencia, estado)) {
                         System.out.println("✅ Asistencia marcada correctamente.");
                     } else {
-                        System.out.println("❌ Error al marcar asistencia.");
+                        System.out.println("❌ No se encontró el estudiante o hubo un error.");
                     }
                     break;
+                
+                
 
                 case 6:
                     System.out.println("Saliendo del sistema...");

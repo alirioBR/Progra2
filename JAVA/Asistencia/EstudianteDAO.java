@@ -55,36 +55,42 @@ public class EstudianteDAO implements IEstudianteDAO {
         }
     }
 
-    @Override
-    public List<Estudiante> listar() {
-        List<Estudiante> estudiantes = new ArrayList<>();
-        String sql = "SELECT * FROM Estudiantes";
-        try (Statement stmt = conexion.createStatement();
-             ResultSet rs = stmt.executeQuery(sql)) {
-            while (rs.next()) {
-                Estudiante estudiante = new Estudiante(
-                        rs.getInt("id"),
-                        rs.getString("nombre"),
-                        rs.getString("apellido"),
-                        rs.getString("codigo")
-                );
-                estudiantes.add(estudiante);
-            }
-        } catch (SQLException e) {
-            System.out.println("Error al listar estudiantes: " + e.getMessage());
-        }
-        return estudiantes;
-    }
 
-public boolean marcarAsistencia(int id, String estado) {
-    String sql = "UPDATE Estudiantes SET estado = ? WHERE id = ?";
+public boolean marcarAsistencia(String codigo, String estado) {
+    String sql = "UPDATE Estudiantes SET estado = ? WHERE codigo = ?";
     try (PreparedStatement stmt = conexion.prepareStatement(sql)) {
         stmt.setString(1, estado);
-        stmt.setInt(2, id);
-        return stmt.executeUpdate() > 0;
+        stmt.setString(2, codigo);
+        int filasActualizadas = stmt.executeUpdate();
+
+        return filasActualizadas > 0;  // Retorna true si se actualizó al menos un registro
     } catch (SQLException e) {
-        System.out.println("Error al marcar asistencia: " + e.getMessage());
+        System.out.println("❌ Error al marcar asistencia: " + e.getMessage());
         return false;
     }
 }
+
+public List<Estudiante> listar() {
+    List<Estudiante> listaEstudiantes = new ArrayList<>();
+    String sql = "SELECT id, nombre, apellido, codigo, estado FROM Estudiantes";
+
+    try (Statement stmt = conexion.createStatement();
+         ResultSet rs = stmt.executeQuery(sql)) {
+
+        while (rs.next()) {
+            Estudiante estudiante = new Estudiante(
+                rs.getInt("id"),
+                rs.getString("nombre"),
+                rs.getString("apellido"),
+                rs.getString("codigo"),
+                rs.getString("estado") // Obtener el estado desde la BD
+            );
+            listaEstudiantes.add(estudiante);
+        }
+
+    } catch (SQLException e) {
+        System.out.println("Error al listar estudiantes: " + e.getMessage());
+    }
+    return listaEstudiantes;
+    }
 }

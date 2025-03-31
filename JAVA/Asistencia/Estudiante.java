@@ -5,15 +5,16 @@ public class Estudiante {
     private String nombre;
     private String apellido;
     private String codigo;
+    private String estado; // Nuevo campo
 
-    // Constructor with all parameters
-    public Estudiante(int id, String nombre, String apellido, String codigo) {
+    public Estudiante(int id, String nombre, String apellido, String codigo, String estado) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.codigo = codigo;
+        this.estado = estado;
     }
-    
+
     // Getters y Setters
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
@@ -26,4 +27,7 @@ public class Estudiante {
 
     public String getCodigo() { return codigo; }
     public void setCodigo(String codigo) { this.codigo = codigo; }
+
+    public String getEstado() { return estado; }
+    public void setEstado(String estado) { this.estado = estado; }
 }
