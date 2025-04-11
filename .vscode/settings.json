@@ -56,5 +56,13 @@
   "C_Cpp_Runner.useLeakSanitizer": false,
   "C_Cpp_Runner.showCompilationTime": false,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
+<<<<<<< HEAD
   "java.compile.nullAnalysis.mode": "automatic"
+=======
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "c:\\Users\\aliri\\Downloads\\mysql-connector-j-9.2.0\\mysql-connector-j-9.2.0\\mysql-connector-j-9.2.0.jar"
+  ]
+>>>>>>> 8f79de7abb811f9641196f1b04dd9e605f03a0a4
 }
