@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "ProymvcApplication",
+      "request": "launch",
+      "mainClass": "com.claseafe.proymvc.ProymvcApplication",
+      "projectName": "Progra2_f50464d0"
+    },
+    {
+      "type": "java",
+      "name": "ProymvcApplication",
+      "request": "launch",
+      "mainClass": "ProymvcApplication",
+      "projectName": "Progra2_f50464d0"
+    },
+    {
+      "type": "java",
       "name": "TestConexion",
       "request": "launch",
       "mainClass": "Asistencia.TestConexion",
