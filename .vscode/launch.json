@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Gestionadorcito",
+      "request": "launch",
+      "mainClass": "Gestionadorcito",
+      "projectName": ""
+    },
+    {
+      "type": "java",
       "name": "ProymvcApplication",
       "request": "launch",
       "mainClass": "com.claseafe.proymvc.ProymvcApplication",
